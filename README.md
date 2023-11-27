@@ -84,6 +84,6 @@ pip install -r requirements.txt
 ## Запуск локального сервера
 
 ```sh
-uvicorn app.main:app
+python main.py
 ```
 
