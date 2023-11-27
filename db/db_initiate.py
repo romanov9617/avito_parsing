@@ -1,4 +1,4 @@
-from app.db.db_base import engine, Base
+from db.db_base import engine, Base
 
 
 async def init_db():

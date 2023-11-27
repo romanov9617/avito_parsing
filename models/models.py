@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class SearchRequest(BaseModel):
     query: str
     region: str
-
+    start_parsing: bool = False
 
 class StatistcickRequest(BaseModel):
     id: int

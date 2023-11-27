@@ -3,7 +3,7 @@ from typing import Annotated
 from sqlalchemy import ForeignKey, text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db.db_base import Base
+from db.db_base import Base
 
 pkint = Annotated[int, mapped_column(primary_key=True, autoincrement=True)]
 created_at = Annotated[datetime, mapped_column(default=datetime.utcnow)]
@@ -28,3 +28,4 @@ class CountsORM(Base):
     created_at: Mapped[created_at]
 
     pair: Mapped['PairsORM'] = relationship("PairsORM", back_populates="counters")
+

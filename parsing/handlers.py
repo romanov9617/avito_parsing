@@ -2,9 +2,9 @@ from aiohttp import ClientResponse, ClientSession
 import asyncio
 import random
 
-from app.parsing.parser import parse_responce
-from app.db.db_endpoints import get_all_queries, push_counts_to_db
-from app.config import settings
+from parsing.parser import parse_responce
+from db.db_endpoints import get_all_queries, push_counts_to_db
+from config import settings
 
 
 async def get_response(id: int, query: str, region: str):

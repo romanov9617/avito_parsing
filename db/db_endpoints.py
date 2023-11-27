@@ -3,10 +3,10 @@ from sqlalchemy import insert, select
 from sqlalchemy.orm import selectinload
 
 
-from app.db.db_base import engine, async_session_factory
-from app.db.db_schemas import PairsORM, CountsORM
-from app.models.models import SearchRequest, StatistcickRequest
-from app.config import settings
+from db.db_base import engine, async_session_factory
+from db.db_schemas import PairsORM, CountsORM
+from models.models import SearchRequest
+from config import settings
 
 
 async def push_pair_to_db(request: SearchRequest):
